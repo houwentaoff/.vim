@@ -1,0 +1,30 @@
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/c"]
+	path = bundle/c
+	url = https://github.com/WolfgangMehner/vim-plugins.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/DoxygenToolkit"]
+	path = bundle/DoxygenToolkit
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = https://github.com/vim-scripts/Solarized.git
+[submodule "bundle/visualmark"]
+	path = bundle/visualmark
+	url = https://github.com/vim-scripts/visualMarks.vim.git
+[submodule "bundle/minibufexpl"]
+	path = bundle/minibufexpl
+	url = https://github.com/vim-scripts/minibufexpl.vim.git
+[submodule "bundle/better-snipmate-snippet"]
+	path = bundle/better-snipmate-snippet
+	url = https://github.com/vim-scripts/better-snipmate-snippet.git
