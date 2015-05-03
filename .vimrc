@@ -1,8 +1,9 @@
 "must put head of vimrc
-source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+"call pathogen#infect()
+execute pathogen#infect()
 Helptags
+let test=0
 
 set ai "自动缩进
 set nu "行号
@@ -16,6 +17,13 @@ set nu "行号
 syntax enable  
 "set syntax=/usr/share/vim/vim73/syntax/c.vim
 syntax on "语法高亮
+"solarized{
+"let g:solarized_termcolors=16
+set background=dark
+"set background=light
+colorscheme solarized
+"}
+if test == 1
 set backspace=indent,eol,start
 set mouse=a "设置在任何模式下鼠标都能用，可以复制到选择缓冲区
 "set mouse=v "可以将选择的内容复制到剪贴板
@@ -158,5 +166,7 @@ endfunction
 
 map <silent> <F11> :call ToggleFullscreen()<CR>
 "}
+"
+endif
 
 

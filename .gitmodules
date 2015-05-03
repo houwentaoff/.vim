@@ -16,9 +16,6 @@
 [submodule "bundle/DoxygenToolkit"]
 	path = bundle/DoxygenToolkit
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = https://github.com/vim-scripts/Solarized.git
 [submodule "bundle/visualmark"]
 	path = bundle/visualmark
 	url = https://github.com/vim-scripts/visualMarks.vim.git
@@ -28,3 +25,6 @@
 [submodule "bundle/better-snipmate-snippet"]
 	path = bundle/better-snipmate-snippet
 	url = https://github.com/vim-scripts/better-snipmate-snippet.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
