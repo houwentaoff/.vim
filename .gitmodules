@@ -25,3 +25,6 @@
 [submodule "bundle/language_comments"]
 	path = bundle/language_comments
 	url = https://github.com/houwentaoff/vim-plugins.git
+[submodule "bundle/visualMarks"]
+	path = bundle/visualMarks
+	url = https://github.com/houwentaoff/visualMarks.vim.git
