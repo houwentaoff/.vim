@@ -59,8 +59,8 @@ set completeopt=menu,preview
 "}
 
 "SuperTab{
-    let g:SuperTabRetainCompletionType=2
-    let g:SuperTabDefaulltCompletionType="<C-P>"
+"    let g:SuperTabRetainCompletionType=2
+"    let g:SuperTabDefaulltCompletionType="<C-P>"
 "}
 "g:solarized_termcolors=256
 "set t_Co=256
