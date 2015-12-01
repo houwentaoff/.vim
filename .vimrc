@@ -76,7 +76,7 @@ set completeopt=menu,preview
 "	endif
 
 "tags{
-    set tags=./tags,./../tags,../../tags,../../../tags,../../../../tags,/usr/src/kernel/tags,/usr/src/glibc-2.17/tags
+    set tags=./tags,./../tags,../../tags,../../../tags,../../../../tags,/usr/src/kernel/tags,/usr/src/glibc-2.17/tags,/usr/src/libstdc++-v3.0.97/tags
     function! UpdateCtags()
         let curdir=getcwd()
         while !filereadable("./tags")
