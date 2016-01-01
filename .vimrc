@@ -33,7 +33,7 @@ set fdm=marker "代码折叠
 set foldmethod=manual "代码折叠
 "set ts=8 sw=8 cin
 "set bg=dark "显示不同的颜色色调，（背景）"
-"set guifont=Courier\ New\ 18
+set guifont=Courier\ New\ 12
 "set guifont=MONACO:h10
 "set guifontwide=Consolas:h12
 "set guifont=*
