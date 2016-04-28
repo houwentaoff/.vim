@@ -54,10 +54,8 @@
 imap <C-S> <ESC> :w<CR>
 nmap <C-S> :w<CR>
 "所有的注释都是绿色 不仅仅是语法中c才是.
+"windows 中请把此句放入文件 `_vimrc`中
 highlight Comment gui=NONE guifg=green
-"对齐快捷键盘(左右)
-nmap <C-Left> <ESC><<
-nmap <C-Right> <ESC>>>
 
 "filetype on
 "imap <A-t> <Esc> <A-t>i

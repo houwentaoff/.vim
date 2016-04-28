@@ -160,6 +160,10 @@ endfunction
 map <silent> <F11> :call ToggleFullscreen()<CR>
 "}
 "
+"对齐快捷键盘(左右)
+nmap <C-Left> <ESC><<
+nmap <C-Right> <ESC>>>
+
 if test == 1
 endif
 
