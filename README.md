@@ -4,6 +4,8 @@
 ## 截图
 solarized主题
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim1.png)
+![solarized](https://github.com/houwentaoff/images/blob/master/vim2.png)
+![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)
 ## windows 安装步骤
 - 下载所有目录,将塞满,就可以用.官网上的试了一下,部分更新没有同步,不能用,于是了这个.  
 - 除开使用.vimrc外需将.gvimrc中的部分内容使用. 
