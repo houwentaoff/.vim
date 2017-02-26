@@ -458,30 +458,36 @@ hi def link cCppOut2		cCppOut  " Old syntax group for #if of #if 0
 hi def link cCppOut		Comment
 
 let b:current_syntax = "c"
-"  added by housir 
+"  added by housir joy sean
 "  修改注释为绿色 sola 那个配色默认的不是绿色
 hi Comment gui=none guifg=green
 "  内核函数 高亮显色
 syn keyword kernelFunction kmalloc kzalloc kfree cmalloc printk ioremap iounmap request_irq free_irq 
+syn keyword kernelFunction spin_unlock_irq spin_lock_irq spin_lock spin_unlock 
+syn keyword kernelFunction tasklet_hi_schedule do_gettimeofday
+syn keyword kernelFunction schedule_delayed_work
 "list head macro，内核链表相关操作宏
 syn keyword kernelMacro  list_splice_tail_init list_entry list_first_entry list_for_each list_for_each_safe list_for_each_prev list_for_each_entry list_for_each_entry_continue list_for_each_entry_continue_reverse list_for_each_entry_from list_for_each_entry_safe list_for_each_entry_safe_continue list_for_each_entry_safe_from list_for_each_entry_safe_reverse
 "表示attrib的宏
-syn keyword kernelMacro asmlinkage __user
+syn keyword kernelMacro asmlinkage __user __func__ __LINE__
+syn keyword kernelMacro virt_to_phys phys_to_virt copy_from_user copy_to_user MKDEV MAJOR spin_lock_init
+syn keyword kernelMacro schedule_work
 "dma type
-syn keyword kernelctype dma_chan dma_async_tx_descriptor dma_addr_t dma_cookie_t mm_segment_t
+syn keyword kernelctype dma_chan dma_async_tx_descriptor dma_addr_t dma_cookie_t mm_segment_t 
+syn keyword kernelctype loff_t dev_t spinlock_t completion
 syn keyword kernelVar abbc 
 "syn cluster CFunction contains=kernelFunction,kernelVar
-"hi def link CFunction Repeat
+"hi def link CFunction Repeat !!!!xterm-256-color chart !!!
 "color
 hi def link kernelFunction CFunctionK
 hi def link kernelMacro CKernelM
 hi def link kernelCtype CKernelCtype
 "暗紫色
-hi  CFunctionK gui=NONE guifg=#774D68
+hi  CFunctionK gui=NONE guifg=#774D68 ctermfg=201
 "酒红色
-hi  CKernelM gui=NONE guifg=#B80E4E
+hi  CKernelM gui=NONE guifg=#B80E4E ctermfg=9
 "深黄色
-hi  CKernelCtype gui=NONE guifg=#C9BB0A
+hi  CKernelCtype gui=NONE guifg=#C9BB0A ctermfg=226
 
 "增加cType 内容
 syn keyword        cType                u32 u64 u8 u16 INT32 INT64
@@ -490,7 +496,7 @@ syn keyword        cType                __b32
 "hi cFunction gui=NONE guifg=#B5A1FF "紫色
 syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
-hi cFunction gui=NONE guifg=#B5A1FE
+hi cFunction gui=NONE guifg=#B5A1FE ctermfg=201
 
 syn keyword kernel_api probe disconnect
 hi kernel_api gui=NONE guifg=#B5A1FE
@@ -499,13 +505,13 @@ hi kernel_api gui=NONE guifg=#B5A1FE
 
 "宏全部显示为红色
 syn match hou_all_cmacro "\<[A-Z][A-Z_0-9]*\>"
-hi hou_all_cmacro guifg=#FF0000 gui=NONE
+hi hou_all_cmacro guifg=#FF0000 gui=NONE ctermfg=9
 
 syn match hou_cmacro / __LINE__\| __FUNCTION__/
-hi hou_cmacro  guifg=#FF0000 gui=NONE
+hi hou_cmacro  guifg=#FF0000 gui=NONE ctermfg=9
 
 syn match hou_function /printf\|print\|perror/
-hi hou_function guifg=#ff8c00 gui=NONE
+hi hou_function guifg=#ff8c00 gui=NONE ctermfg=201
 
 "main函数
 syn keyword mainFunction main
