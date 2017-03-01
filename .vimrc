@@ -44,6 +44,7 @@ set guifont=Courier\ New\ 12
 "*.mk             g:filetype_w    |ft-cweb-syntax|
 "solarized{
 set background=dark
+set t_Co=256
 colorscheme solarized
 "}
 

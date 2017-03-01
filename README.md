@@ -16,7 +16,12 @@ solarized主题
 [step 3] `git submodule update --init --recursive`  
 [step 4] `sudo apt-get install ctags cscope`  
 [step 5] 建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``
-
+[step 6] 如果在终端上使用vim（包括xshell连接），需在~/.bashrc末尾加上如下语句用于设置终端为256颜色。
+'''
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+''' 默认的终端颜色可用`tput colors`进行查看,一般默认为8色.
 ## add new repo (add one)
 1. cd ~/.vim 
 2. git submodule add repo-url  DST-DIR (eg:git submodule add https://github.com/plasticboy/vim-markdown.git)  
