@@ -471,7 +471,7 @@ syn keyword kernelMacro  list_splice_tail_init list_entry list_first_entry list_
 "表示attrib的宏
 syn keyword kernelMacro asmlinkage __user __func__ __LINE__
 syn keyword kernelMacro virt_to_phys phys_to_virt copy_from_user copy_to_user MKDEV MAJOR spin_lock_init
-syn keyword kernelMacro schedule_work
+syn keyword kernelMacro schedule_work current
 "dma type
 syn keyword kernelctype dma_chan dma_async_tx_descriptor dma_addr_t dma_cookie_t mm_segment_t 
 syn keyword kernelctype loff_t dev_t spinlock_t completion
