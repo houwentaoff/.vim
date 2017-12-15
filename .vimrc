@@ -32,7 +32,7 @@ set shiftwidth=4
 set fdm=marker "代码折叠
 set foldmethod=manual "代码折叠
 "set ts=8 sw=8 cin
-"set bg=dark "显示不同的颜色色调，（背景）"
+set bg=dark "显示不同的颜色色调，（背景）"
 set guifont=Courier\ New\ 12
 "set guifont=MONACO:h10
 "set guifontwide=Consolas:h12
@@ -43,7 +43,7 @@ set guifont=Courier\ New\ 12
 "[mM]akefile*             g:filetype_w    |ft-cweb-syntax|
 "*.mk             g:filetype_w    |ft-cweb-syntax|
 "solarized{
-set background=dark
+"set background=dark
 set t_Co=256
 colorscheme solarized
 "}
@@ -164,7 +164,68 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 "对齐快捷键盘(左右)
 nmap <C-Left> <ESC><<
 nmap <C-Right> <ESC>>>
+"go lang
+"{
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_version_warning = 1
+let g:tagbar_left = 1
+let g:go_fmt_command = "goimports"
 
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+au FileType go nmap <F6> :TagbarToggle<CR>
+" vim-go custom mappings
+"au FileType go nmap s (go-implements)
+"au FileType go nmap i (go-info) "和vi中的i冲突
+"使用gd 查找函数定义 和doc文档
+au FileType go nmap gd (go-doc) 
+"au FileType go nmap gv (go-doc-vertical)
+"au FileType go nmap r (go-run)
+"au FileType go nmap b (go-build)
+"au FileType go nmap t (go-test)
+"au FileType go nmap c (go-coverage)
+"au FileType go nmap ds (go-def-split)
+"au FileType go nmap dv (go-def-vertical)
+"au FileType go nmap dt (go-def-tab)
+"au FileType go nmap e (go-rename)
+"let g:tagbar_ctags_bin = '/usr/local/go/bin/gotags' "加了出错
+"let g:tagbar_ctagsargs = '-sort -silent ' "加了出错
+"必须执行下面的语句用于下载go工具
+"go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
+"go get golang.org/x/tools/cmd/goimports  "自动插入import 包
+"go get -u github.com/rogpeppe/godef
+"go get   golang.org/x/tools/cmd/guru "gocode 需要用到
+"}
 if test == 1
 endif
 
