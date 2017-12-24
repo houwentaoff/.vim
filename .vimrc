@@ -221,10 +221,18 @@ au FileType go nmap gd (go-doc)
 "let g:tagbar_ctags_bin = '/usr/local/go/bin/gotags' "加了出错
 "let g:tagbar_ctagsargs = '-sort -silent ' "加了出错
 "必须执行下面的语句用于下载go工具
+"go get -u github.com/jstemmer/gotags 
+"1. 保证gotags等工具在PATH环境变量中
+"sh中参考`
+"export GOROOT=/usr/local/go  
+"export GOPATH=/home/work/github/go
+"export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+"`
 "go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
 "go get golang.org/x/tools/cmd/goimports  "自动插入import 包
 "go get -u github.com/rogpeppe/godef
 "go get   golang.org/x/tools/cmd/guru "gocode 需要用到
+"
 "}
 if test == 1
 endif
