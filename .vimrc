@@ -204,6 +204,7 @@ let g:tagbar_type_go = {
 \ }
 
 au FileType go nmap <F6> :TagbarToggle<CR>
+au FileType c,cpp,python,java nmap <F6> :TagbarToggle<CR>
 " vim-go custom mappings
 "au FileType go nmap s (go-implements)
 "au FileType go nmap i (go-info) "和vi中的i冲突
