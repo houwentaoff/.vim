@@ -208,6 +208,7 @@ au FileType go nmap <F6> :TagbarToggle<CR>
 "au FileType go nmap s (go-implements)
 "au FileType go nmap i (go-info) "和vi中的i冲突
 "使用gd 查找函数定义 和doc文档
+"gd命令依赖于下面的guru
 au FileType go nmap gd (go-doc) 
 "au FileType go nmap gv (go-doc-vertical)
 "au FileType go nmap r (go-run)
@@ -231,7 +232,7 @@ au FileType go nmap gd (go-doc)
 "go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
 "go get golang.org/x/tools/cmd/goimports  "自动插入import 包
 "go get -u github.com/rogpeppe/godef
-"go get   golang.org/x/tools/cmd/guru "gocode 需要用到
+"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
 "
 "}
 if test == 1
