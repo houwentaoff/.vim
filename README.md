@@ -3,6 +3,7 @@
 
 ## 截图
 solarized主题
+![solarized](https://github.com/houwentaoff/images/blob/master/vim4.png)
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim1.png)
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim2.png)
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)
@@ -22,6 +23,11 @@ if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 ''' 默认的终端颜色可用`tput colors`进行查看,一般默认为8色.
+
+## linux 更新说明
+1. 执行`git pull`更新配置和子工程对应的版本配置.
+2. 执行`git submodule update --init --recursive` 更新所有子模块.
+
 ## add new repo (add one)
 1. cd ~/.vim 
 2. git submodule add repo-url  DST-DIR (eg:git submodule add https://github.com/plasticboy/vim-markdown.git)  
@@ -36,11 +42,12 @@ sp/vsp　分裂窗口
 其它详细见.vimrc．
 ```
 ## website
-[more] (http://www.upaomian.com/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%AE%A1%E7%90%86vim%E9%85%8D%E7%BD%AE/)
+[more] (http://www.lora-app.com/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%AE%A1%E7%90%86vim%E9%85%8D%E7%BD%AE/)
 
 ## note
 **若step 2 或 step 3 出现某个子模块网络错误，不能更新可以将其子项目目录手动删除然后重新执行step 2,3则可正常下载。**
-**配置git 提交使用的编辑器: git config --global core.editor vim。**
+**配置git 提交使用的编辑器: git config --global core.editor vim.**
+**确保使用的是vim而不是vi. 使用vi可能会提示找不到配色solarized**
 
 ## Donation
 如果你认为对你有所帮助, You can Buy me a coffee:)
@@ -53,4 +60,4 @@ sp/vsp　分裂窗口
 -----------------
 Joy * hou
 Email: 544088192@qq.com
-Blog:[http://www.upaomian.com](http://www.upaomian.com)
+Blog:[http://www.lora-app.com](http://www.lora-app.com)
