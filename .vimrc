@@ -29,8 +29,24 @@ set ruler "显示右下角的状态"
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set fdm=marker "代码折叠
-set foldmethod=manual "代码折叠
+
+"代码折叠 indent : help folding
+"
+"zc     折叠 :常用
+"za     切换折叠和非折叠:常用 嵌套则用zA
+"zR     展开文件中所有折叠:常用
+"zC     对当前光标范围内所有嵌套的折叠点进行折叠(递归)
+"zo     展开当前光标下的折叠:常用
+"不常用
+"zO     对当前光标下范围内所有嵌套的折叠点展开 
+"[z     到当前打开的折叠的开始处。
+"]z     到当前打开的折叠的末尾处。
+"zj     向下移动。到达下一个折叠的开始处。关闭的折叠也被计入。
+"zk     向上移动到前一折叠的结束处。关闭的折叠也被计入。
+
+set fdm=indent "marker "代码折叠
+"set foldmethod=manual "代码折叠 foldmethos == fdm
+set foldlevelstart=99 "刚打开文件时候不允许被折叠
 "set ts=8 sw=8 cin
 set bg=dark "显示不同的颜色色调，（背景）"
 set guifont=Courier\ New\ 12
@@ -99,7 +115,7 @@ set completeopt=menu,preview
 "miniBufExplorer{
 "    let g:miniBufExplorerMoreThanOne=0
 "}
-
+"被tagbar替代
 "taglist{
     map <f6> :TlistToggle<CR>
     let g:Tlist_Use_Left_Window=1
