@@ -16,6 +16,7 @@ solarized主题
 5. 将`.vim`文件夹改名为`vimfiles`或替换`vimfiles`  
 6. 将下载目录下的_vimrc拷贝到`F:\Program Files (x86)\Vim\ ` 安装目录中  
 7. 将下载目录中`package/cscope package/ctags压缩包中的执行程序ctags.exe cscope.exe`拷贝放入vim的执行文件目录.
+8. 可选 在`Source Insight`中用快捷键`F1` 用`gvim`打开当前文件:在自定义命令中加入`"F:\Program Files (x86)\Vim\vim80\gvim.exe"  %f +%l`并映射快捷键F1.
 
 ## linux　安装步骤
 [step 1] `git clone https://github.com/houwentaoff/.vim.git`  
