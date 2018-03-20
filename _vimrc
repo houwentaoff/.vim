@@ -29,10 +29,26 @@ set ruler "显示右下角的状态"
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set fdm=marker "代码折叠
-set foldmethod=manual "代码折叠
+
+"代码折叠 indent : help folding
+"
+"zc     折叠 :常用
+"za     切换折叠和非折叠:常用 嵌套则用zA
+"zR     展开文件中所有折叠:常用
+"zC     对当前光标范围内所有嵌套的折叠点进行折叠(递归)
+"zo     展开当前光标下的折叠:常用
+"不常用
+"zO     对当前光标下范围内所有嵌套的折叠点展开 
+"[z     到当前打开的折叠的开始处。
+"]z     到当前打开的折叠的末尾处。
+"zj     向下移动。到达下一个折叠的开始处。关闭的折叠也被计入。
+"zk     向上移动到前一折叠的结束处。关闭的折叠也被计入。
+
+set fdm=indent "marker "代码折叠
+"set foldmethod=manual "代码折叠 foldmethos == fdm
+set foldlevelstart=99 "刚打开文件时候不允许被折叠
 "set ts=8 sw=8 cin
-"set bg=dark "显示不同的颜色色调，（背景）"
+set bg=dark "显示不同的颜色色调，（背景）"
 set guifont=Courier\ New\ 12
 "set guifont=MONACO:h10
 "set guifontwide=Consolas:h12
@@ -163,9 +179,78 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 "对齐快捷键盘(左右)
 nmap <C-Left> <ESC><<
 nmap <C-Right> <ESC>>>
-highlight Comment gui=NONE guifg=green
-imap <C-S> <ESC> :w<CR>
-nmap <C-S> :w<CR>
+"go lang
+"{
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_version_warning = 1
+let g:tagbar_left = 1
+let g:go_fmt_command = "goimports"
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+au FileType go nmap <F6> :TagbarToggle<CR>
+au FileType c,cpp,python,java nmap <F6> :TagbarToggle<CR>
+" vim-go custom mappings
+"au FileType go nmap s (go-implements)
+"au FileType go nmap i (go-info) "和vi中的i冲突
+"使用gd 查找函数定义 和doc文档
+"gd命令依赖于下面的guru
+au FileType go nmap gd (go-doc) 
+"au FileType go nmap gv (go-doc-vertical)
+"au FileType go nmap r (go-run)
+"au FileType go nmap b (go-build)
+"au FileType go nmap t (go-test)
+"au FileType go nmap c (go-coverage)
+"au FileType go nmap ds (go-def-split)
+"au FileType go nmap dv (go-def-vertical)
+"au FileType go nmap dt (go-def-tab)
+"au FileType go nmap e (go-rename)
+"let g:tagbar_ctags_bin = '/usr/local/go/bin/gotags' "加了出错
+"let g:tagbar_ctagsargs = '-sort -silent ' "加了出错
+"必须执行下面的语句用于下载go工具
+"go get -u github.com/jstemmer/gotags 
+"1. 保证gotags等工具在PATH环境变量中
+"sh中参考`
+"export GOROOT=/usr/local/go  
+"export GOPATH=/home/work/github/go
+"export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+"`
+"go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
+"go get golang.org/x/tools/cmd/goimports  "自动插入import 包
+"go get -u github.com/rogpeppe/godef
+"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
+"
+"}
 if test == 1
 endif
 

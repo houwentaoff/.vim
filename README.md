@@ -8,8 +8,14 @@ solarized主题
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim2.png)
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)
 ## windows 安装步骤
-- 下载所有目录,将塞满,就可以用.官网上的试了一下,部分更新没有同步,不能用,于是了这个.  
-- 除开使用.vimrc外需将.gvimrc中的部分内容使用. 
+0. 在vim安装目录建立`vimfiles`文件夹`F:\Program Files (x86)\Vim\vimfiles`  
+1. 使用git工具进行下载安装  
+2. `git clone https://github.com/houwentaoff/.vim.git`  
+3. `git submodule sync`  
+4. `git submodule update --init --recursive`  
+5. 将`.vim`文件夹改名为`vimfiles`或替换`vimfiles`  
+6. 将下载目录下的_vimrc拷贝到`F:\Program Files (x86)\Vim\ ` 安装目录中  
+7. 将下载目录中`package/cscope package/ctags压缩包中的执行程序ctags.exe cscope.exe`拷贝放入vim的执行文件目录.
 
 ## linux　安装步骤
 [step 1] `git clone https://github.com/houwentaoff/.vim.git`  
@@ -18,11 +24,12 @@ solarized主题
 [step 4] `sudo apt-get install ctags cscope`  
 [step 5] 建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``
 [step 6] 如果在终端上使用vim（包括xshell连接），需在~/.bashrc末尾加上如下语句用于设置终端为256颜色。
-'''
+``` shell
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
-''' 默认的终端颜色可用`tput colors`进行查看,一般默认为8色.
+```
+默认的终端颜色可用`tput colors`进行查看,一般默认为8色.
 
 ## linux 更新说明
 1. 执行`git pull`更新配置和子工程对应的版本配置.
