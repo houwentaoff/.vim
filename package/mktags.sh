@@ -20,7 +20,7 @@ fi
 
 ctags -R
 
-find ./ -name '*.cpp' -o -name '*.hh' -o -name '*.[ch]' > ${cscope_flist}
+find ./ -name '*.cpp' -o -name '*.cc' -o -name '*.hh' -o -name '*.[ch]' > ${cscope_flist}
 
 cscope -bkq -i $cscope_flist
 
