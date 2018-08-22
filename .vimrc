@@ -246,13 +246,26 @@ au FileType go nmap gd (go-doc)
 "export GOPATH=/home/work/github/go
 "export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 "`
-"go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
-"go get golang.org/x/tools/cmd/goimports  "自动插入import 包
-"go get -u github.com/rogpeppe/godef
-"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
+"`由于golang网站被墙，所以需要用github上的备份并建立golang中的软连接到golang，最后go
+" install生成的文件需要copy到/usr/local/bin中`
+"1. mkdir -p `pwd`/golang.org/x
+"2. ln  -s `pwd`/github.com/golang/tools `pwd`/golang.org/x/tools
+"3. go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
+"3.1 go install github.com/nsf/gocode
 "
+"go get golang.org/x/tools/cmd/goimports  "自动插入import 包 golang被墙
+"4.go get github.com/golang/tools/cmd/goimports
+"4.1 go install golang/tools/cmd/goimports
+"
+"5. go get -u github.com/rogpeppe/godef
+"5.1 go install github.com/rogpeppe/godef
+"
+"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
+"6. go get -u  github.com/golang/tools/cmd/guru
+"6.1 go install golang/tools/cmd/gurn
+"7. cp ~/go/bin/* /usr/local/bin/
 "}
 if test == 1
 endif
-
+let g:go_version_warning = 0
 
