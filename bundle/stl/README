@@ -1,2 +1,8 @@
+2018-9
+
+已改为全为文件而非快捷文件，避免自行修改.
+
+legacy
+
 http://www.vim.org/scripts/script.php?script_id=2224
 ** cpp.vim 为stl.vim的快捷方式 linux下表现正常 windows下需自行更改**
