@@ -34,6 +34,13 @@ fi
 1. cd ~/.vim 
 2. git submodule add repo-url  DST-DIR (eg:git submodule add https://github.com/plasticboy/vim-markdown.git)  
 
+## Optional
+* install YouCompleteMe
+    1. `cd ~/.vim/bundle/YouCompleteMe`
+    2. `./install.py --clang-completer`
+    3. `cp -a ~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ~/.vim/`
+    4. enjoy youself.
+
 ## 快捷键说明
 ```
 ctrl+<或> : 左/右缩进 
@@ -46,6 +53,8 @@ sp/vsp　分裂窗口
 c/c++添加bug修复注释 begin:`\ckc b`  end:`\ckc e`
 c/c++添加文件注释`\cfdi` `\cfdh`
 c/c++添加函数注释`F3`
+
+c/c++查找库函函数定义`\gg` "you should install YouCompleteMe.
 go语言中在`:w`保存后默认会自动添加缺少的包和代码对齐
 
 ```
@@ -53,9 +62,10 @@ go语言中在`:w`保存后默认会自动添加缺少的包和代码对齐
 [more] (http://www.lora-app.com/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%AE%A1%E7%90%86vim%E9%85%8D%E7%BD%AE/)
 
 ## note
-**若step 2 或 step 3 出现某个子模块网络错误，不能更新可以将其子项目目录手动删除然后重新执行step 2,3则可正常下载。**
+**若step 2 或 step 3 出现某个子模块网络错误，不能更新可以将其子项目目录手动删除然后重新执行step 2,3则可正常下载.**
 **配置git 提交使用的编辑器: git config --global core.editor vim.**
 **确保使用的是vim而不是vi. 使用vi可能会提示找不到配色solarized**
+**全clone c/c++代码补全插件YouCompleteMe会话费大量时间，并且需要做`Optional`中的操作, 根据需要可以不进行更新该模块.**
 
 ## 截图
 solarized主题
