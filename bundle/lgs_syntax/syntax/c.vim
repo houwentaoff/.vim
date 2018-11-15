@@ -507,10 +507,10 @@ hi kernel_api gui=NONE guifg=#B5A1FE
 syn match hou_all_cmacro "\<[A-Z][A-Z_0-9]*\>"
 hi hou_all_cmacro guifg=#FF0000 gui=NONE ctermfg=9
 
-syn match hou_cmacro / __LINE__\| __FUNCTION__/
+syn match hou_cmacro /[^a-zA-Z]__LINE__[^a-zA-Z]\|[^a-zA-Z]__FUNCTION__[^a-zA-Z]/
 hi hou_cmacro  guifg=#FF0000 gui=NONE ctermfg=9
 
-syn match hou_function /printf\|print\|perror/
+syn match hou_function /[^a-zA-Z]printf[( ]\|[^a-zA-Z]print[( ]\|[^a-zA-Z]perror[( ]/
 hi hou_function guifg=#ff8c00 gui=NONE ctermfg=201
 
 "main函数
