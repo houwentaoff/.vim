@@ -18,5 +18,12 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
+usage(){
+    echo "$0" ' "*.c" "str" ' 
+    exit 0
+}
+if [ $# -ne 2 ]; then 
+    usage 
+fi
 
 find ./ -iname "$1" |xargs grep -in --color "$2"
