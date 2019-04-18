@@ -1,6 +1,10 @@
 # .vim
 # vim-srcipt
 
+## 推荐安装
+1. make update
+2. make install
+
 ## windows 安装步骤
 0. 在vim安装目录建立`vimfiles`文件夹`F:\Program Files (x86)\Vim\vimfiles`  
 1. 使用git工具进行下载安装  
@@ -13,18 +17,29 @@
 8. 可选 在`Source Insight`中用快捷键`F1` 用`gvim`打开当前文件:在自定义命令中加入`"F:\Program Files (x86)\Vim\vim80\gvim.exe"  %f +%l`并映射快捷键F1.
 
 ## linux　安装步骤
-[step 1] `git clone https://github.com/houwentaoff/.vim.git`  
-[step 2] `git submodule sync`  
-[step 3] `git submodule update --init --recursive`  
-[step 4] `sudo apt-get install ctags cscope`  
-[step 5] 建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``      
-[step 6] 如果在终端上使用vim（包括xshell连接），需在~/.bashrc末尾加上如下语句用于设置终端为256颜色。
+1. `git clone https://github.com/houwentaoff/.vim.git`  
+2. `git submodule sync`  
+3. `git submodule update --init --recursive`  
+4. `sudo apt-get install ctags cscope`  
+5.  建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``      
+6.  如果在终端上使用vim（包括xshell连接），需在`~/.bashrc`末尾加上如下语句用于设置终端为256颜色。
+* 在不使用xshell情况下下面的代码是能正常工作的
 ``` shell
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 ```
+* 在使用xshell连接时需要使用如下替换xterm-256color,否则颜色会异常.
+``` shell
+if [ "$TERM" == "xterm" ]; then
+    export TERM=gnome-256color
+fi
+```
 默认的终端颜色可用`tput colors`进行查看,一般默认为8色.
+* `package/xshell.xcs` 为`xshell`配色文件，需要和`.bashrc`中的配合使用
+
+## xshell
+若使用`xshell`需要将`package/xshell.xcs`导入配色.
 
 ## linux 更新说明
 1. 执行`git pull`更新配置和子工程对应的版本配置.
