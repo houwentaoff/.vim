@@ -28,7 +28,7 @@ update:
 
 define GENERTE_VIMRC
 	rm ~/.vimrc.back -rf
-	[ -f ~/.vimrc ] &&  mv ~/.vimrc ~/.vimrc.back
+	-@[ -f ~/.vimrc ] &&  mv ~/.vimrc ~/.vimrc.back
 	ln -s `pwd`/.vimrc ~/.vimrc
 endef
 
