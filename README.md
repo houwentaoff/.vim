@@ -68,6 +68,7 @@ sp/vsp　分裂窗口
 c/c++添加bug修复注释 begin:`\ckc b`  end:`\ckc e`
 c/c++添加文件注释`\cfdi` `\cfdh`
 c/c++添加函数注释`F3`
+c/c++添加注释段  `\cfr`  
 
 c/c++查找库函函数定义`\gg` "you should install YouCompleteMe.
 go语言中在`:w`保存后默认会自动添加缺少的包和代码对齐
