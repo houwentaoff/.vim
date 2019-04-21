@@ -23,13 +23,13 @@
 4. `sudo apt-get install ctags cscope`  
 5.  建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``      
 6.  如果在终端上使用vim（包括xshell连接），需在`~/.bashrc`末尾加上如下语句用于设置终端为256颜色。
-* 在不使用xshell情况下下面的代码是能正常工作的
+* 使用xshell时可以使用`xterm-256color`.
 ``` shell
 if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 ```
-* 在使用xshell连接时需要使用如下替换xterm-256color,否则颜色会异常.
+* 在使用xshell时,你也可以使用`gnome-256color`替换xterm.
 ``` shell
 if [ "$TERM" == "xterm" ]; then
     export TERM=gnome-256color
@@ -47,7 +47,7 @@ fi
 
 ## add new repo (add one)
 1. cd ~/.vim 
-2. git submodule add repo-url  DST-DIR (eg:git submodule add https://github.com/plasticboy/vim-markdown.git)  
+2. git submodule add repo-url  DST-DIR (eg:`git submodule add https://github.com/plasticboy/vim-markdown.git bundle/vim-markdown`)  
 
 ## Optional
 * install YouCompleteMe

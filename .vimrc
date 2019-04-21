@@ -63,6 +63,9 @@ set guifont=Courier\ New\ 12
 "solarized{
 "set background=dark
 set t_Co=256
+let g:solarized_termcolors=256
+"let g:solarized_contrast="low"
+"let g:solarized_termtrans=1
 colorscheme solarized
 "}
 
@@ -81,8 +84,6 @@ set completeopt=menu,preview
 "    let g:SuperTabRetainCompletionType=2
 "    let g:SuperTabDefaulltCompletionType="<C-P>"
 "}
-"g:solarized_termcolors=256
-"set t_Co=256
 "	 if has("gui_running")
 "		if has("gui_gtk2")
 "			:set guifont=Luxi\ Mono\ 12
