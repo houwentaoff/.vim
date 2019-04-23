@@ -39,7 +39,7 @@ fi
 * `package/xshell.xcs` 为`xshell`配色文件，需要和`.bashrc`中的配合使用
 
 ## xshell
-若使用`xshell`需要将`package/xshell.xcs`导入配色.
+    直接使用默认的`xterm`配色.
 
 ## linux 更新说明
 1. 执行`git pull`更新配置和子工程对应的版本配置.

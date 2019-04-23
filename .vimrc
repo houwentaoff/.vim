@@ -18,8 +18,8 @@ syntax enable
 "set syntax=/usr/share/vim/vim73/syntax/c.vim
 syntax on "语法高亮
 set backspace=indent,eol,start
-set mouse=c " xshell中的粘贴可以使用
-"set mouse=a
+set mouse=a " xshell中的粘贴使用shift 操作
+"set mouse=c
 ""设置在任何模式下鼠标都能用，可以复制到选择缓冲区,(xshell中鼠标右键不能使用)
 "set mouse=v "可以将选择的内容复制到剪贴板
 set showcmd "共享外部剪贴板
