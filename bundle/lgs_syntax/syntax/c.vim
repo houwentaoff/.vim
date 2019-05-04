@@ -460,7 +460,7 @@ hi def link cCppOut		Comment
 let b:current_syntax = "c"
 "  added by housir joy sean
 "  修改注释为绿色 sola 那个配色默认的不是绿色
-hi Comment gui=none guifg=green
+"hi Comment gui=none guifg=green
 "  内核函数 高亮显色
 syn keyword kernelFunction kmalloc kzalloc kfree cmalloc printk ioremap iounmap request_irq free_irq 
 syn keyword kernelFunction spin_unlock_irq spin_lock_irq spin_lock spin_unlock 

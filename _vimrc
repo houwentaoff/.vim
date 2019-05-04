@@ -18,7 +18,9 @@ syntax enable
 "set syntax=/usr/share/vim/vim73/syntax/c.vim
 syntax on "语法高亮
 set backspace=indent,eol,start
-set mouse=a "设置在任何模式下鼠标都能用，可以复制到选择缓冲区
+set mouse=a " xshell中的粘贴使用shift 操作
+"set mouse=c
+""设置在任何模式下鼠标都能用，可以复制到选择缓冲区,(xshell中鼠标右键不能使用)
 "set mouse=v "可以将选择的内容复制到剪贴板
 set showcmd "共享外部剪贴板
 set hlsearch
@@ -59,7 +61,11 @@ set guifont=Courier_New:h12
 "[mM]akefile*             g:filetype_w    |ft-cweb-syntax|
 "*.mk             g:filetype_w    |ft-cweb-syntax|
 "solarized{
-set background=dark
+"set background=dark
+set t_Co=256
+let g:solarized_termcolors=256
+"let g:solarized_contrast="low"
+"let g:solarized_termtrans=1
 colorscheme solarized
 "}
 
@@ -78,8 +84,6 @@ set completeopt=menu,preview
 "    let g:SuperTabRetainCompletionType=2
 "    let g:SuperTabDefaulltCompletionType="<C-P>"
 "}
-"g:solarized_termcolors=256
-"set t_Co=256
 "	 if has("gui_running")
 "		if has("gui_gtk2")
 "			:set guifont=Luxi\ Mono\ 12
@@ -92,6 +96,7 @@ set completeopt=menu,preview
 "	endif
 
 "tags{
+    "pc company
     set tags=./tags,./../tags,./../../tags,./../../../tags,./../../../../tags,/usr/src/kernel/tags,/usr/src/glibc-2.17/tags,/usr/src/libstdc++-v3.0.97/tags
     function! UpdateCtags()
         let curdir=getcwd()
@@ -114,7 +119,7 @@ set completeopt=menu,preview
 "miniBufExplorer{
 "    let g:miniBufExplorerMoreThanOne=0
 "}
-
+"被tagbar替代
 "taglist{
     map <f6> :TlistToggle<CR>
     let g:Tlist_Use_Left_Window=1
@@ -245,13 +250,52 @@ au FileType go nmap gd (go-doc)
 "export GOPATH=/home/work/github/go
 "export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 "`
-"go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
-"go get golang.org/x/tools/cmd/goimports  "自动插入import 包
-"go get -u github.com/rogpeppe/godef
-"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
+"`由于golang网站被墙，所以需要用github上的备份并建立golang中的软连接到golang，最后go
+" install生成的文件需要copy到/usr/local/bin中`
+"1. mkdir -p `pwd`/golang.org/x
+"2. ln  -s `pwd`/github.com/golang/tools `pwd`/golang.org/x/tools
+"3. go get -u github.com/nsf/gocode  "use gocode  代码补全的守护进程
+"3.1 go install github.com/nsf/gocode
 "
+"go get golang.org/x/tools/cmd/goimports  "自动插入import 包 golang被墙
+"4.go get github.com/golang/tools/cmd/goimports
+"4.1 go install golang/tools/cmd/goimports
+"
+"5. go get -u github.com/rogpeppe/godef
+"5.1 go install github.com/rogpeppe/godef
+"
+"go get   golang.org/x/tools/cmd/guru "gocode 需要用到 gd命令会用到
+"6. go get -u  github.com/golang/tools/cmd/guru
+"6.1 go install golang/tools/cmd/gurn
+"7. cp ~/go/bin/* /usr/local/bin/
 "}
 if test == 1
 endif
+let g:go_version_warning = 0
+"youcompleteme  
+"{
+"默认tab  s-tab 和自动补全冲突
+set completeopt=longest,menu
+let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
+let g:ycm_complete_in_comments = 1 "在注释输入中也能补全
+let g:ycm_complete_in_strings = 1 "在字符串输入中也能补全
+let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
+let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
+let g:ycm_min_num_of_chars_for_completion=2 " 从第2个键入字符就开始罗列匹配项
+let g:ycm_cache_omnifunc=0  " 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_server_python_interpreter='/usr/bin/python'
+
+"跳转到定义处 默认的leader 是'\'
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" 跳转到申明处
+noremap <leader>gl :YcmCompleter GoToDeclaration<CR>           
+" 定义或声明
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+" 查看错误
+nmap <leader>gd :YcmDiags<CR>
+"}
+highlight Comment gui=NONE guifg=#008000
 
 
