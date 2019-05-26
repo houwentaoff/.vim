@@ -19,10 +19,11 @@
 ## linux　安装步骤
 1. `git clone https://github.com/houwentaoff/.vim.git`  
 2. `git submodule sync`  
-3. `git submodule update --init --recursive`  
-4. `sudo apt-get install ctags cscope`  
-5.  建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``      
-6.  如果在终端上使用vim（包括xshell连接），需在`~/.bashrc`末尾加上如下语句用于设置终端为256颜色。
+3. `git rm --cached bundle/YouCompleteMe`  去掉下载缓慢的`YouCompleteMe`插件 如需要可不取消
+4. `git submodule update --init --recursive`  
+5. `sudo apt-get install ctags cscope`  
+6.  建立.vimrc软连接指向该项目中的.vimrc　``ln -s `pwd`/.vim/.vimrc ~/.vimrc``      
+7.  如果在终端上使用vim（包括xshell连接），需在`~/.bashrc`末尾加上如下语句用于设置终端为256颜色。
 * 使用xshell时可以使用`xterm-256color`.
 ``` shell
 if [ "$TERM" == "xterm" ]; then

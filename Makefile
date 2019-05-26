@@ -1,6 +1,8 @@
 default:all
 all:
 
+USE_YOUCOMPLETEME:=1
+
 define OTHER_CMD
 	echo "test"
 endef
@@ -21,8 +23,10 @@ define INFO
 endef
 
 update:
+ifeq ($(USE_YOUCOMPLETEME), 0)
+	git rm --cached bundle/YouCompleteMe
+endif
 	-@$(SYNC_CMD)
-
 	-@#-@$(foreach hook,$(TARGET_HOOKS),\
 		$(shell $($(hook))))
 	-@#$(foreach hook, $(TARGET_HOOKS), $(call hook))
