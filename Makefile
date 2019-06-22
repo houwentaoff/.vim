@@ -1,7 +1,7 @@
 default:all
 all:
-
-USE_YOUCOMPLETEME:=1
+#  It will take a lot of time to download `youcompleteme`. 
+USE_YOUCOMPLETEME:=0
 
 define OTHER_CMD
 	echo "test"
