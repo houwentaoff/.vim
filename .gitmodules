@@ -46,3 +46,6 @@
 [submodule "bundle/xterm-color-table"]
 	path = bundle/xterm-color-table
 	url = https://github.com/guns/xterm-color-table.vim.git
+[submodule "bundle/vim-bitbake"]
+	path = bundle/vim-bitbake
+	url = https://github.com/houwentaoff/vim-bitbake.git

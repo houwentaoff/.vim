@@ -92,14 +92,10 @@ solarized主题
 ![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)
 
 ## Donation
-如果你认为对你有所帮助, You can Buy me a coffee:)
-### 微信
-![donation](https://github.com/houwentaoff/images/blob/master/wxpay_qrcode.png)
-### 支付宝
-![donation](https://github.com/houwentaoff/images/blob/master/alipay.jpg)
+....
 
 -----------------
 -----------------
 Joy * hou
 Email: 544088192@qq.com
-Blog:[http://www.lora-app.com](http://www.lora-app.com)
+Blog:no money
