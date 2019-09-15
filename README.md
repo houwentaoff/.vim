@@ -73,23 +73,24 @@ c/c++添加注释段  `\cfr`
 
 c/c++查找库函函数定义`\gg` "you should install YouCompleteMe.
 go语言中在`:w`保存后默认会自动添加缺少的包和代码对齐
+粘贴代码时使用 ｀set paste｀ 然后进入插入模式,这样不会主动代码对齐,`set no paste`
 
 ```
-## website
+## website  
 [more] (http://www.lora-app.com/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%AE%A1%E7%90%86vim%E9%85%8D%E7%BD%AE/)
 
-## note
-**若step 2 或 step 3 出现某个子模块网络错误，不能更新可以将其子项目目录手动删除然后重新执行step 2,3则可正常下载.**
-**配置git 提交使用的编辑器: git config --global core.editor vim.**
-**确保使用的是vim而不是vi. 使用vi可能会提示找不到配色solarized**
-**全clone c/c++代码补全插件YouCompleteMe会话费大量时间，并且需要做`Optional`中的操作, 根据需要可以不进行更新该模块.**
+## note　　
+**若step 2 或 step 3 出现某个子模块网络错误，不能更新可以将其子项目目录手动删除然后重新执行step 2,3则可正常下载.**　　
+**配置git 提交使用的编辑器: git config --global core.editor vim.**　　
+**确保使用的是vim而不是vi. 使用vi可能会提示找不到配色solarized**　　
+**全clone c/c++代码补全插件YouCompleteMe会话费大量时间，并且需要做`Optional`中的操作, 根据需要可以不进行更新该模块.**　　
 
 ## 截图
 solarized主题
-![solarized](https://github.com/houwentaoff/images/blob/master/vim4.png)
-![solarized](https://github.com/houwentaoff/images/blob/master/vim1.png)
-![solarized](https://github.com/houwentaoff/images/blob/master/vim2.png)
-![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)
+![solarized](https://github.com/houwentaoff/images/blob/master/vim4.png)  
+![solarized](https://github.com/houwentaoff/images/blob/master/vim1.png)  
+![solarized](https://github.com/houwentaoff/images/blob/master/vim2.png)  
+![solarized](https://github.com/houwentaoff/images/blob/master/vim3.png)  
 
 ## Donation
 ....
