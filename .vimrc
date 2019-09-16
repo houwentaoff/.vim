@@ -299,3 +299,13 @@ nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nmap <leader>gd :YcmDiags<CR>
 "}
 
+"paste toggle
+"{
+"
+set pastetoggle=<F12>
+"map <F10> :set paste<CR>                                                                                                                                 
+"map <F11> :set nopaste<CR>
+"imap <F10> <C-O>:set paste<CR>
+"imap <F11> <nop>
+"set pastetoggle=<F11>
+"
