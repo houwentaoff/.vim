@@ -23,8 +23,8 @@ define INFO
 endef
 
 update:
-ifeq ($(USE_YOUCOMPLETEME), 0)
-	git rm --cached bundle/YouCompleteMe
+ifeq ($(USE_YOUCOMPLETEME),0)
+	-@git rm --cached bundle/YouCompleteMe
 endif
 	-@$(SYNC_CMD)
 	-@#-@$(foreach hook,$(TARGET_HOOKS),\
