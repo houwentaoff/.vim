@@ -155,6 +155,7 @@ set completeopt=menu,preview
 "cscope{
     "设置cscope的显示结果是否显示在quickfix中，> copen
     set cscopequickfix=s-,g-,d-,c-,t-,e-,f-
+    set nocscopeverbose
     "cscope 和 ctags 的同步。一步快捷命令
     "1. :cs kill 0
     "2. :cd ${PRJ_ROOT}
