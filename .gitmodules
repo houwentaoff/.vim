@@ -6,46 +6,46 @@
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
+	url = git://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/DoxygenToolkit"]
 	path = bundle/DoxygenToolkit
-	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+	url = git://github.com/vim-scripts/DoxygenToolkit.vim.git
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
-	url = https://github.com/vim-scripts/minibufexpl.vim.git
+	url = git://github.com/vim-scripts/minibufexpl.vim.git
 [submodule "bundle/better-snipmate-snippet"]
 	path = bundle/better-snipmate-snippet
-	url = https://github.com/vim-scripts/better-snipmate-snippet.git
+	url = git://github.com/vim-scripts/better-snipmate-snippet.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
-	url =  https://github.com/houwentaoff/solarized.git
+	url =  git://github.com/houwentaoff/solarized.git
 [submodule "bundle/language_comments"]
 	path = bundle/language_comments
-	url = https://github.com/houwentaoff/vim-plugins.git
+	url = git://github.com/houwentaoff/vim-plugins.git
 [submodule "bundle/visualMarks"]
 	path = bundle/visualMarks
-	url = https://github.com/houwentaoff/visualMarks.vim.git
+	url = git://github.com/houwentaoff/visualMarks.vim.git
 [submodule "bundle/msupertab"]
 	path = bundle/msupertab
-	url = https://github.com/houwentaoff/supertab.git
+	url = git://github.com/houwentaoff/supertab.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = git://github.com/plasticboy/vim-markdown.git
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
+	url = git://github.com/fatih/vim-go.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
+	url = git://github.com/majutsushi/tagbar.git
 [submodule "bundle/kotlin-vim"]
 	path = bundle/kotlin-vim
-	url = https://github.com/udalov/kotlin-vim.git
+	url = git://github.com/udalov/kotlin-vim.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = git://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/xterm-color-table"]
 	path = bundle/xterm-color-table
-	url = https://github.com/guns/xterm-color-table.vim.git
+	url = git://github.com/guns/xterm-color-table.vim.git
 [submodule "bundle/vim-bitbake"]
 	path = bundle/vim-bitbake
-	url = https://github.com/houwentaoff/vim-bitbake.git
+	url = git://github.com/houwentaoff/vim-bitbake.git
