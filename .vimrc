@@ -298,6 +298,9 @@ noremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 " 查看错误
 nmap <leader>gd :YcmDiags<CR>
+" fixed 映射鼠标滚轮不能翻页
+noremap <ScrollWheelDown><ScrollWheelUp> <ScrollWheelDown>
+noremap <ScrollWheelUp><ScrollWheelUp> <ScrollWheelUp>
 "}
 
 "paste toggle
